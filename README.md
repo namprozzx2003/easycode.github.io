@@ -1,0 +1,2 @@
+# easycode.github.io
+EasyCode
