@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 6</title>
+<style>
+	table {
+		margin: 0 auto;
+		border: 2px solid;
+		border-collapse: collapse;
+		width: 50%;
+	}
+	td{
+		border: 1px solid;
+	}
+	textarea{width: 80%; height: 150px;}
+	.item{
+		font-weight: bold;
+		text-align: center;
+		font-size: 1.5rem;
+		padding-bottom: 1rem;
+		padding-top: 0.1rem;
+	}
+</style>
+</head>
+	
+<body>
+	<table>
+    	<tr><td colspan="2" class="item">ĐĂNG KÝ THÀNH VIÊN</td></tr>
+        <tr><td>Tên đăng nhập</td><td><input type="text" id="name" required></td></tr>
+        <tr><td>Mật khẩu</td><td><input type="password" id="password" required></td></tr>
+        <tr><td>Ngày sinh</td><td><input type="text" id="date" placeholder="dd/mm/yyyy" required></td></tr>
+        <tr>
+        	<td>Giới tính</td>
+            <td>
+            	<input type="radio" id="male" name="sex" checked>Nam
+                <input type="radio" id="female" name="sex">Nữ
+            </td>
+        </tr>
+        <tr>
+        	<td>Vấn đề bạn quan tâm</td>
+            <td>
+            	<select>
+                	<option id="economic" selected>Kinh tế</option>
+                    <option id="sport">Thể thao</option>
+                    <option id="art_liter">Văn học nghệ thuật</option>
+                </select>
+            </td>
+        </tr>
+        <tr><td><button type="button" onClick="Register()">Đăng ký</button></td><td><button type="button" onClick="location.reload()">Hủy</button></td></tr>
+        <tr><td colspan="2"><textarea id="result"></textarea></td></tr>
+    </table>
+    <script>
+		function Register(){
+			var sex="";
+			var care="";
+			var count=0;
+			var text="";
+			var name=document.getElementById("name").value;
+			var password=document.getElementById("password").value;
+			var date=document.getElementById("date").value;
+			if(document.getElementById("male").checked){sex="Nam";}
+			if(document.getElementById("female").checked){sex="Nữ";}
+			if(document.getElementById("economic").selected){care="Kinh tế";}
+			if(document.getElementById("sport").selected){care="Thể thao";}
+			if(document.getElementById("art_liter").selected){care="Văn học nghệ thuật";}
+			for(var i=0;i<password.length;i++){count++;}
+			text="Chào mừng "+name+"\nBạn là "+sex+"\nMật khẩu của bạn có "+count+" ký tự\nBạn sinh ngày "+date+"\nVấn đề bạn quan tâm là "+care;
+			return document.getElementById("result").innerHTML=text;
+		}
+    </script>
+</body>
+</html>

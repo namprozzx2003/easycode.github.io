@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 3</title>
+<style>
+	h1{text-align: center;}
+	table, td{
+		border: 1px solid;
+		width: 50%;
+		}
+	table{
+		margin: 0 auto;
+		border: 2px solid;
+		}
+	.item{margin: 5px;}
+	button{margin: 5px;}
+</style>
+</head>
+
+<body>
+	<h1>CÁC PHÉP TÍNH SỐ HỌC</h1>
+    <table>
+    	<tr><td>Số thứ 1</td><td><input type="number" id="first_number" required></td></tr>
+        <tr><td>Số thứ 2</td><td><input type="number" id="second_number" required></td></tr>
+        <tr>
+        	<td>Chọn phép toán</td>
+        	<td>
+            	<input type="radio" id="plus" name="math" class="item" checked>Cộng<br>
+                <input type="radio" id="minus" name="math" class="item">Trừ<br>
+                <input type="radio" id="multiply" name="math" class="item">Nhân<br>
+                <input type="radio" id="divide" name="math" class="item">Chia<br>
+            </td>
+        </tr>
+        <tr>
+        	<td><button type="button" onClick="Solve()">Thực hiện</button><button type="button" onClick="location.reload()">Xóa</button></td>
+            <td><input type="text" id="result" disabled></td>
+        </tr>
+    </table>
+    <script>
+		function Solve(){
+			var a=Number(document.getElementById("first_number").value);
+			var b=Number(document.getElementById("second_number").value);
+			if(document.getElementById("plus").checked){document.getElementById("result").value=Math.round((a+b)*100)/100;}
+			if(document.getElementById("minus").checked){document.getElementById("result").value=Math.round((a-b)*100)/100;}
+			if(document.getElementById("multiply").checked){document.getElementById("result").value=Math.round((a*b)*100)/100;}
+			if(document.getElementById("divide").checked){
+				if(b==0){document.getElementById("result").value="MATH ERROR!";}
+				else{document.getElementById("result").value=Math.round((a/b)*100)/100;}
+			}
+		}
+    </script>
+</body>
+</html>

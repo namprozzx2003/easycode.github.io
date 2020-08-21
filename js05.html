@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 5</title>
+<style>
+	h1{text-align: center;}
+	td{
+		border: 1px solid;
+		padding-left: 25px;
+	}
+	table{
+		width: 500px;
+		border: 3px ridge;
+		margin: 0 auto;
+	}
+</style>
+</head>
+
+<body>
+	<h1>BẢNG CỬU CHƯƠNG</h1>
+    <table>
+    	<tr>
+        	<td id="2"></td>
+            <td id="3"></td>
+            <td id="4"></td>
+            <td id="5"></td>
+        </tr>
+        <tr>
+        	<td id="6"></td>
+            <td id="7"></td>
+            <td id="8"></td>
+            <td id="9"></td>
+        </tr>
+    </table>
+    <script>
+		function table(n){
+			var line="";
+			for(var i=1;i<10;i++){
+				line+=n+" x "+i+" = "+Number(n*i)+"<br>";
+			}
+			return line;
+		}
+		document.getElementById("2").innerHTML=table(2);
+		document.getElementById("3").innerHTML=table(3);
+		document.getElementById("4").innerHTML=table(4);
+		document.getElementById("5").innerHTML=table(5);
+		document.getElementById("6").innerHTML=table(6);
+		document.getElementById("7").innerHTML=table(7);
+		document.getElementById("8").innerHTML=table(8);
+		document.getElementById("9").innerHTML=table(9);
+    </script>
+</body>
+</html>

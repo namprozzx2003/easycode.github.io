@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 7</title>
+<style>
+	table{
+		border: 2px solid navy;
+		border-collapse: collapse;
+		margin: 0 auto;
+		width: 500px;
+		background-color: #FFCCFF;
+	}
+	td{border: 1px solid navy;}
+	.item{
+		text-align: center;
+		font-weight: bold;
+		color: blue;
+	}
+</style>
+</head>
+
+<body>
+	<form action="">
+    	<table>
+            <tr><td colspan="2" class="item">ĐĂNG KÝ MUA HÀNG</td></tr>
+            <tr><td>Họ:</td><td><input type="text" id="last_name" pattern="[a-zA-Z _àáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳỵỷỹýÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ]{1,20}" title="Vui lòng nhập chữ và phải nhập tối đa 20 ký tự." required></td></tr>
+            <tr><td>Tên:</td><td><input type="text" id="first_name" pattern="[a-zA-Z _àáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳỵỷỹýÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ]{1,20}" title="Vui lòng nhập chữ và phải nhập tối đa 20 ký tự." required></td></tr>
+            <tr><td>Email:</td><td><input type="email" id="email" required></td></tr>
+            <tr><td>Số Điện Thoại:</td><td><input type="tel" id="phone" pattern="[0-9]{10}" title="Vui lòng nhập số và phải nhập 10 số." required></td></tr>
+            <tr><td>Số Lượng Mua:</td><td><input type="text" id="number" pattern="[0-9]{1,3}" title="Vui lòng nhập số và phải nhập tối đa 3 số." required></td></tr>
+            <tr><td>Ngày Nhận Hàng:</td><td><input type="date" id="date" required></td></tr>
+            <tr>
+                <td>Thanh Toán:</td>
+                <td>
+                    <input type="radio" id="transfer" name="pay" required>Chuyển Khoản
+                    <input type="radio" id="direct" name="pay" required>Trực Tiếp Khi Giao Hàng
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Đăng Ký Mua"></td>
+                <td><input type="button" onclick="location.reload()" value="Xóa"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

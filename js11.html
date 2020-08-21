@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 11</title>
+<style>
+	h3{text-align: center;}
+	.item{width: 250px;}
+	button{margin-right:5px;}
+</style>
+</head>
+
+<body>
+	<table>
+    	<tr><td colspan="2"><h3>THAY THẾ CHUỖI</h3></td></tr>
+    	<tr>
+        	<td>Chuỗi ban đầu:</td>
+            <td><input type="text" class="item" id="original"></td>
+        </tr>
+        <tr>
+        	<td>Chuỗi bị thay thế:</td>
+            <td><input type="text" id="beReplaced"></td>
+        </tr>
+        <tr>
+        	<td>Chuỗi thay thế:</td>
+            <td><input type="text" id="replace"></td>
+        </tr>
+        <tr><td></td><td><button type="button" onClick="String_Replace()">Thực hiện</button><button type="button" onClick="location.reload()">Xóa</button></td></tr>
+    </table>
+    <script>
+		function String_Replace(){
+			var original=document.getElementById("original").value;
+			var beReplaced=document.getElementById("beReplaced").value;
+			var Replace=document.getElementById("replace").value;
+			var newString=original.replace(new RegExp(beReplaced,'g'),Replace);
+			document.getElementById("original").value=newString;
+		}
+    </script>
+</body>
+</html>

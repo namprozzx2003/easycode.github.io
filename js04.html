@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 4</title>
+<style>
+	p{
+		text-align: center;
+		font-size: 2rem;
+	}
+</style>
+</head>
+
+<body>
+	<p id="Movement"></p>
+    <script>
+		setInterval(move,100);
+		var array="HTML-JAVASCRIPT ";
+		function move(){
+			array=array.slice(-1)+array.slice(0,-1);
+			document.getElementById("Movement").innerHTML=array;
+		}	
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 12</title>
+<style>
+	h3{text-align: center;}
+	input{width: 270px;}
+</style>
+</head>
+
+<body>
+	<table>
+    	<tr><td colspan="2"><h3>XỬ LÝ CHUỖI</h3></td></tr>
+    	<tr>
+        	<td>Chuỗi ban đầu:</td>
+            <td><input type="text" id="original"></td>
+        </tr>
+        <tr>
+        	<td></td>
+        	<td>
+            	<button type="button" onClick="Reverse()">Đảo chuỗi</button>
+                <button type="button" onClick="Standard()">Chuẩn hóa chuỗi</button>
+                <button type="button" onClick="location.reload()">Xóa chuỗi</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+		function Reverse(){
+			var original=document.getElementById("original").value;
+			var splitString=original.split(" ");
+			var reverseString=splitString.reverse();
+			var newString=reverseString.join(" ");
+			document.getElementById("original").value=newString;
+		}
+		function Standard(){
+			var original=document.getElementById("original").value;
+			var oneSpace=original.replace(/\s\s+/g, ' ');
+			var trimString=oneSpace.trim();
+			var splitString=trimString.split(" ");
+			for(i=0;i<splitString.length;i++){
+				splitString[i]=splitString[i].charAt(0).toUpperCase()+splitString[i].slice(1).toLowerCase();
+			}
+			var newString=splitString.join(" ");
+			document.getElementById("original").value=newString;
+		}
+    </script>
+</body>
+</html>

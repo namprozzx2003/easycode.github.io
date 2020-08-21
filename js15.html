@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 15</title>
+<style>
+	.item{
+		width: 600px;
+		height: 150px;
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;
+	}
+	.text{width: 200px;}
+	button{margin-right: 5px;}
+</style>
+</head>
+
+<body>
+	<div id="style" class="item"></div>
+    <br><br>
+    Nhập nội dung: <input type="text" id="content" class="text"><br><br>
+    Màu nền: <input type="color" id="bg"><br><br>
+    Màu chữ: <input type="color" id="color"><br><br>
+    <button type="button" onClick="CreateStyle()">Thực hiện</button>
+    <button type="button" onClick="location.reload()">Xóa</button>
+    <script>
+		function CreateStyle(){
+			var content=document.getElementById("content").value;
+			var bg=document.getElementById("bg").value;
+			var color=document.getElementById("color").value;
+			document.getElementById("style").innerHTML=content;
+			document.getElementById("style").style.backgroundColor=bg;
+			document.getElementById("style").style.color=color;
+		}
+			
+    </script>
+</body>
+</html>

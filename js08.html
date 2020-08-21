@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 8</title>
+</head>
+
+<body>
+	<p>Chào bạn : <strong id="name"></strong></p>
+    <p>Tuổi của bạn là : <strong id="age"></strong></p>
+    <script>
+		var name=prompt("Tên:");
+		var year=prompt("Năm sinh:");
+		var currentDate=new Date();
+		var currentYear=currentDate.getFullYear();
+		document.getElementById("name").innerHTML=name;
+		document.getElementById("age").innerHTML=Number(currentYear-year);
+    </script>
+</body>
+</html>

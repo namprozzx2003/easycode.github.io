@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JS 1</title>
+    <style>
+		table, td {border: 1px solid; width: 40%;}
+		table{margin-bottom: 20px;}
+		input{width: 80%;}
+		button{margint: 10px;}
+    </style>
+</head>
+<body>
+	<h1>CHƯƠNG TRÌNH TÍNH TUỔI</h1>
+	<table>
+        <tr><td>Nhập vào tên bạn:</td><td><input type="text" id="name" required></td></tr>
+        <tr><td>Nhập vào năm sinh:</td><td><input type="number" id="year" required></td></tr>
+    </table>
+    <button type="button" onclick="Xinchao()">Tính tuổi</button>
+    <button type="button" onClick="location.reload()">Xóa</button>
+    <p id="output"></p>
+    <script>
+		function Xinchao(){
+			var Ten=document.getElementById("name").value;
+			var Namsinh=document.getElementById("year").value;
+			var currentDate=new Date();
+			var currentYear=currentDate.getFullYear();
+			document.getElementById("output").innerHTML="Chào bạn " + Ten + "!"+"<br>"+"Tuổi của bạn là "+(currentYear-Namsinh)
+		}
+    </script>
+</body>
+</html>

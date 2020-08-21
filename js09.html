@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 9</title>
+</head>
+
+<body>
+	<h3>XỬ LÍ SỰ KIỆN</h3>
+    <button type="button" onClick="alert('Bạn đã click lên button')">Click vào đây</button>
+    <input type="submit" onClick="alert('Bạn đã submit form')" value="Gửi"><br>
+    <input type="text" id="text"><br><br>
+    <a href="#" onMouseMove="alert('Con trỏ chuột đang nằm trên liên kết')">Click vào liên kết</a>
+</body>
+<script>
+	var check_key=document.getElementById("text");
+	check_key.addEventListener("keyup",function(event){
+		if(event.keyCode===9 || event.keyCode===13){
+			alert('Bạn đã thay đổi chuỗi nhập');
+		}
+	})
+</script>
+</html>

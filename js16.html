@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<title>JS 16</title>
+<style>
+	div{
+		width: 600px;
+		height: 60px;
+		line-height: 30px;
+	}
+</style>
+</head>
+
+<body>
+	<h1 id="h1">Thay đổi Style</h1>
+    <input type="radio" name="style" id="default" checked onClick="location.reload()">Mặc định<br>
+    <input type="radio" name="style" id="change" onClick="Style()">Áp dụng style<br><br>
+    <div id="div">Click vào tùy chọn "Mặc định" chuyển về định dạng mặc định.<br>Click vào tùy chọn "Áp dụng style" để áp dụng style định dạng.</div>
+    <script>
+		function Style(){
+			document.getElementById("h1").style.color="red";
+			document.getElementById("div").style.backgroundColor="navy";
+			document.getElementById("div").style.color="yellow";
+			document.getElementById("div").style.padding="15px";
+			document.getElementById("div").style.fontWeight="bold";
+		}
+    </script>
+</body>
+</html>
