@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+a{font-size:1.1em;font-weight:bold;}
+a:link{color:green; text-decoration:none;}
+a:visited{color:blue; text-decoration:none;}
+a:hover{color:red; text-decoration:underline;}
+a:active{color:yellow; text-decoration:underline;}

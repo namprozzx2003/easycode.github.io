@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+caption{
+	caption-side:top;
+	text-align:center;
+}
+table{border: thin groove;}
+tr.th{
+	color:white;
+	background-color: gray;
+	text-align: center;
+	padding: 2px;
+}
+tr.td-1{
+	background-color: whitesmoke;
+	padding: 2px;
+}
+tr.td-2{
+	background-color: gainsboro;
+	padding: 2px;
+}

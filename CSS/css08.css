@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+.one{
+	border: 2px solid;
+	width: 200px;
+	height: 100px;
+	background-color: yellow;
+	overflow: visible;
+	margin: 40px;
+}
+.two{
+	border: 2px solid;
+	width: 200px;
+	height: 100px;
+	background-color: yellow;
+	margin: 40px;
+	line-height: 20px;
+	overflow: hidden;
+	float: left;
+}
+.three{
+	border: 2px solid;
+	width: 200px;
+	height: 100px;
+	background-color: yellow;
+	overflow: scroll;
+ 	margin: 80px;
+	float: none;
+}	
+	

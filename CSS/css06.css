@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	text-align:center;
+}
+p.one{
+	color: white;
+	background:url(../Images/a.jpg) center fixed;
+}
+p.two{
+	color:white;
+	background:url(../Images/b.jpg) center fixed;
+}
+p.three{
+	color:white;
+	background:url(../Images/c.jpg) center fixed;
+}

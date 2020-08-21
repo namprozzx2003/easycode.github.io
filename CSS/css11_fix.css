@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+div.header{
+				font-size: 36px;
+				color: yellow;
+				text-align:center;
+				height:60px;
+				background-image:url(../Images/d.jpg);
+				line-height:60px;
+				overflow:hidden;
+			}
+			.navbar {
+				font-size:20px;
+				text-align:center;
+				margin-top:2px;
+				background:blue;
+				height:40px;
+			}
+			.container {
+				margin-top:2px;
+				display:grid;
+				grid-template-columns:15% 65% 20%;
+				height:500px;
+			}
+			.footer {
+				color: yellow;
+				text-align:center;
+				background:blue;
+				height:50px;
+				line-height:50px;
+				margin-top: 10px;
+			}
+			.left {
+				text-align:left;
+				overflow:hidden;
+				background:green;
+				color:white;
+			}
+			
+			.right {
+				background:green;
+				text-align:center;
+				display:grid;
+				grid-template-rows: 200px 200px;
+			}
+			a{ 
+				text-decoration:none; 
+				color: white;
+			}
+			a:hover {
+				color:yellow;
+				font-weight: bold;
+			}
+			nav ul {
+				list-style:none;
+			}
+			nav ul li {
+				padding: 0 10px;
+				display:inline-block;
+				line-height:40px;
+			}
+			nav { 
+				padding:0;
+				margin:0;
+			}
+			.ad{
+				padding: 7px;
+				margin:15px;
+				font-weight:bold;
+				background:white;
+				border-radius:20px;
+				overflow:hidden;
+			}
+			.middle{
+				display:grid;
+				grid-template-columns: 50% 50%;
+				grid-template-rows: 250px 250px;
+				padding:5px;
+			}
+			.article {
+				margin:2px;
+				background:lightgrey;
+				overflow:scroll;
+				line-height:20px;
+			}

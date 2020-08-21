@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+h1{
+	background-color: lightgrey;
+	border: medium solid black;
+}
+p.one{
+	border: medium solid grey;
+	padding: 5px;
+}
+p.two{
+	border: medium dashed deepskyblue;
+	padding: 5px;	
+}
+img{
+	border: medium groove;
+	width: 100px;
+	height: 100px;
+}
+span.line-one{
+	background-color: lightgrey;
+	border: 2px solid black;
+}
+span.line-two{
+	background-color: lightgrey;
+	border: 2px dotted red;
+}
+	

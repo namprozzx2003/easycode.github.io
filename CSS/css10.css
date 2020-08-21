@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-family: arial verdana sans-serif;}
+h1{color: forestgreen;}
+#icon ul{
+	background-color: darkturquoise;
+	list-style-type: none;
+}
+#icon li{
+	color: white;
+	display:inline-block;
+	line-height: 40px;
+	width: 210px;
+}
+#icon a{
+	text-decoration: none;
+	display: block;
+	color: white;
+}
+li.one{
+	font-size: 22px;
+	text-shadow: 2px 2px 2px black;
+}
+#icon a:link{color: white;}
+#icon a:hover{color: yellow;}
+#icon a:active{color: lawngreen;}
+a:link.c{color: green; text-decoration: none;}
+a:visited.c{color: green; text-decoration: none;}
+a:hover.c{color: red; text-decoration: none;}
+a:active.c{color: blue; text-decoration: none;}
+a.two{color: white; text-decoration: none;}
+button{background: cyan;}
+button:hover{background: blue;}
