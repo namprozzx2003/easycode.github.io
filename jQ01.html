@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQ 1</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+
+<body>
+	Tên môn học:<input type="text" id="name">
+    <ul id="list">
+    	<li>Python</li>
+        <li>PHP</li>
+    </ul>
+    <button type="button" id="add">Thêm môn học</button>
+    <script>
+		$().ready(function(){
+            $("#add").click(function(){
+				var name=$("#name").val();
+				$("#list").append("<li>"+name+"</li>");
+				$("#name").val("");
+				});
+        });
+    </script>
+</body>
+</html>

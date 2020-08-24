@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQ 6</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+<style>
+	.item{
+		border-radius: 10px;
+		position: relative;
+		height: 20px;
+		width: 50px;
+		border: 1px solid;
+		background-color: #FFFF00;
+		z-index: 999;
+	}
+	button{margin-top: 300px;}
+</style>
+</head>
+
+<body>
+	<div id="move" class="item"></div>
+    <button type="button" id="right">Move right</button>
+    <button type="button" id="left">Move left</button>
+    <button type="button" id="up">Move up</button>
+    <button type="button" id="down">Move down</button>
+</body>
+<script>
+	var div=document.getElementById("move");
+	function GetRandom(){
+		var letters="0123456789ABCDEF";
+		var color="#"
+		for(var i=0;i<6;i++){
+			color+=letters[Math.floor(Math.random()*16)];
+		}
+		return color;
+	}
+	function ChangeColor(){
+		div.style.backgroundColor=GetRandom();
+	}
+	setInterval(ChangeColor,3000);
+	$().ready(function() {
+        $("#right").click(function() {
+            $("#move").animate({left: "+=30px"});
+        });
+		$("#left").click(function() {
+            $("#move").animate({left: "-=30px"});
+        });
+		$("#up").click(function() {
+            $("#move").animate({top: "-=30px"});
+        });
+		$("#down").click(function() {
+            $("#move").animate({top: "+=30px"});
+        });
+    });
+</script>
+</html>

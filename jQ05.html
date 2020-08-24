@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQ 5</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+<style>
+	img{
+		display: block;
+		margin: 0 auto;
+	}
+</style>
+<body>
+	<br><br>
+	<img src="Images/chicken1.jpg">
+    <script>
+		$().ready(function() {
+            $("img").mouseover(function() {
+                $("img").css({"transform": "scale(1.5)"});
+            });
+			$("img").mouseout(function() {
+                $("img").css({"transform": "scale(1)"});
+            });
+        });
+    </script>
+</body>
+</html>
