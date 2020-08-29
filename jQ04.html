@@ -25,6 +25,9 @@
     <h1 id="output"></h1>
     <script>
 		$().ready(function() {
+			$(document).contextmenu(function() {
+				return false;
+			});
 			$("#one").css({"background-color": "rgb(0,0,255)"});
             $("#one").click(function() {
                 $("#output").text("Màu bạn chọn là Xanh: rgb(0, 0, 255)").css({"color": "rgb(0,0,255)"});
