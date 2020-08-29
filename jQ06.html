@@ -7,6 +7,7 @@
 <script type="text/javascript" src="JS/remove_ads.js"></script>
 <style>
 	.item{
+		margin: 0 auto;
 		border-radius: 10px;
 		position: relative;
 		height: 20px;
@@ -15,16 +16,21 @@
 		background-color: #FFFF00;
 		z-index: 999;
 	}
+	.container{
+		text-align: center;
+	}
 	button{margin-top: 300px;}
 </style>
 </head>
 
 <body>
 	<div id="move" class="item"></div>
-    <button type="button" id="right">Move right</button>
-    <button type="button" id="left">Move left</button>
-    <button type="button" id="up">Move up</button>
-    <button type="button" id="down">Move down</button>
+    <div class="container">
+    	<button type="button" id="right">Move right</button>
+        <button type="button" id="left">Move left</button>
+        <button type="button" id="up">Move up</button>
+        <button type="button" id="down">Move down</button>
+    </div>
 </body>
 <script>
 	var div=document.getElementById("move");
@@ -41,6 +47,9 @@
 	}
 	setInterval(ChangeColor,3000);
 	$().ready(function() {
+		$(document).contextmenu(function() {
+				return false;
+			});
         $("#right").click(function() {
             $("#move").animate({left: "+=30px"});
         });
