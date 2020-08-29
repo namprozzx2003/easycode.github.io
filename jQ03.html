@@ -39,6 +39,9 @@
     <button type="button" id="default">Màu nền mặc định</button>
     <script>
 		$().ready(function() {
+			$(document).contextmenu(function() {
+				return false;
+			});
             $("#change").click(function() {
                 $("#odd-1").css({"background-color": "deeppink"});
 				$("#odd-2").css({"background-color": "deeppink"});
