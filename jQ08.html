@@ -161,6 +161,9 @@
 		}
 		
 		$().ready(function() {
+			$(document).contextmenu(function() {
+				return false;
+			});
             dxSimpleSlider('#slider', true, 3000);
         });
     </script>
