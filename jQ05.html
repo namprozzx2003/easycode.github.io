@@ -17,6 +17,9 @@
 	<img src="Images/chicken1.jpg">
     <script>
 		$().ready(function() {
+			$(document).contextmenu(function() {
+				return false;
+			});
             $("img").mouseover(function() {
                 $("img").css({"transform": "scale(1.5)"});
             });
