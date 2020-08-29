@@ -16,6 +16,9 @@
     <button type="button" id="add">Thêm môn học</button>
     <script>
 		$().ready(function(){
+			$(document).contextmenu(function() {
+				return false;
+			});
             $("#add").click(function(){
 				var name=$("#name").val();
 				$("#list").append("<li>"+name+"</li>");
