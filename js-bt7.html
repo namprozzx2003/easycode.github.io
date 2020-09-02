@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 7</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+	<p>Nhập số lượng số nguyên > 0: <input type="number" id="number"></p>
+    <button onClick="Random_Min_Max()">Thực hiện</button>
+    <button onClick="location.reload()">Xóa</button>
+    <p>Dãy số nguyên chẵn ngẫu nhiên từ 2 đến 100 đã tạo:</p>
+    <p id="output"></p>
+    <p id="min"></p>
+    <p id="max"></p>
+    <script>
+		function Random_Min_Max(){
+			var n=document.getElementById("number").value;
+			var text="";
+			var arr=[];
+			for(var i=0;i<n;i++){
+				do
+				{
+					arr[i]=Math.floor((Math.random()*100)+1);
+				} while(arr[i]%2!=0);
+				text+=arr[i]+" ";
+			}
+			document.getElementById("output").innerHTML=text;
+			var min_arr=Math.min(...arr);
+			var max_arr=Math.max(...arr);
+			document.getElementById("min").innerHTML="Số có giá trị nhỏ nhất là: "+min_arr;
+			document.getElementById("max").innerHTML="Số có giá trị lớn nhất là: "+max_arr;
+		}
+    </script>
+<body>
+</body>
+</html>

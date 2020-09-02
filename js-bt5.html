@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 5</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+    <p>Nhập số lượng số nguyên > 0: <input type="number" id="number"></p>
+    <button onClick="Random()">Thực hiện</button>
+    <button onClick="location.reload()">Xóa</button>
+    <p>Dãy số nguyên ngẫu nhiên nhỏ hơn 100 đã tạo:</p>
+    <p id="output"></p>
+    <script>
+		function Random(){
+			var n=document.getElementById("number").value;
+			var text="";
+			for(var i=0;i<n;i++){
+				text+=Math.floor(Math.random()*100)+" ";
+			}
+			document.getElementById("output").innerHTML=text;
+		}
+    </script>
+<body>
+</body>
+</html>

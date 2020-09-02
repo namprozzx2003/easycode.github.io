@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 13</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+
+<body>
+	<table>
+    	<tr>
+        	<td>Nhập chuỗi:</td>
+            <td><input type="text" id="str"></td>
+        </tr>
+        <tr>
+        	<td>Chuỗi trả về:</td>
+            <td><input type="text" id="output"></td>
+        </tr>
+        <tr>
+        	<td>
+            	<button onClick="Upper_Lower()">Thực hiện</button>
+                <button onClick="location.reload()">Xóa</button>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    <script>
+		function Upper_Lower(){
+			var str=document.getElementById("str").value;
+			str=str.split("");
+			if(str.length>=3){
+				for(var i=0;i<3;i++){
+					str[i]=str[i].toLowerCase();
+				}
+			}
+			else{
+				for(var i=0;i<str.length;i++){
+					str[i]=str[i].toUpperCase();
+				}
+			}
+			document.getElementById("output").value=str.join("");
+		}
+    </script>
+</body>
+</html>

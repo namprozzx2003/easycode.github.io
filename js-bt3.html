@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 3</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+	<table>
+    	<tr>
+        	<td>Nhập cạnh thứ nhất:</td>
+            <td><input type="number" id="a"></td>
+        </tr>
+        <tr>
+        	<td>Nhập cạnh thứ hai:</td>
+            <td><input type="number" id="b"></td>
+        </tr>
+        <tr>
+        	<td>Nhập cạnh thứ ba:</td>
+            <td><input type="number" id="c"></td>
+        </tr>
+        <tr>
+        	<td>Diện tích của tam giác:</td>
+            <td><input type="number" id="area" disabled></td>
+        </tr>
+        <tr>
+        	<td>
+            	<button onClick="getArea()">Thực hiện</button>
+                <button onClick="location.reload()">Xóa</button>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
+    <p>Lưu ý: Chiều dài cạnh phải lớn hơn 0.</p>
+    <script>
+		function getArea(){
+			var a=Number(document.getElementById("a").value);
+			var b=Number(document.getElementById("b").value);
+			var c=Number(document.getElementById("c").value);
+			var s=(a+b+c)/2;
+			var area=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+			document.getElementById("area").value=area.toFixed(2);
+		}
+    </script>
+<body>
+</body>
+</html>

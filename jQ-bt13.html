@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JQ 13</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+<style>
+	#item{
+		height: 200px;
+		width: 200px;
+		background-color: blue;
+		border: 1px solid;
+	}
+</style>
+</head>
+	<div id="item"></div>
+    <script>
+		$(document).ready(function() {
+            $("#item").click(function() {
+                $(this).fadeTo(1000,0.5);
+            });
+        });
+    </script>
+<body>
+</body>
+</html>

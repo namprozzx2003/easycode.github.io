@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JQ 8</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+
+<body>
+	<h1>Sự kiện click chuột</h1>
+    <p></p>
+    <script>
+		$(document).ready(function() {
+			$(document).contextmenu(function() {
+				return false;
+			});
+            $("h1").mousedown(function(event) {
+				switch(event.which){
+					case 1:
+						$("p").html("Bạn click chuột trái!");
+						break;
+					case 2:
+						$("p").html("Bạn lăn chuột!");
+						break;
+					case 3:
+						$("p").html("Bạn click chuột phải!");
+						break;
+				}
+			})
+        });
+    </script>
+</body>
+</html>

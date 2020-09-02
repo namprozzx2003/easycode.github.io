@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 9</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+	<table>
+    	<tr>
+        	<td>Nhập số a:</td>
+            <td><input type="number" id="a"></td>
+        </tr>
+        <tr>
+        	<td>Nhập số b:</td>
+            <td><input type="number" id="b"></td>
+        </tr>
+        <tr>
+        	<td>Nhập phép tính:</td>
+            <td><input type="text" id="char"></td>
+        </tr>
+        <tr>
+        	<td>Kết quả:</td>
+            <td><input type="text" id="result" disabled></td>
+        </tr>
+        <tr>
+        	<td>
+            	<button onClick="TotalEx()">Thực hiện</button>
+                <button onClick="location.reload()">Xóa</button>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    <p>Lưu ý: Phép tính là các ký tự (+,-,*,/)</p>
+    <script>
+		function TotalEx(){
+			var a=Number(document.getElementById("a").value);
+			var b=Number(document.getElementById("b").value);
+			var char=document.getElementById("char").value
+			var result;
+			switch(char){
+				case '+':
+					result=(a+b).toFixed(2);
+					break;
+				case '-':
+					result=(a-b).toFixed(2);
+					break;
+				case '*':
+					result=(a*b).toFixed(2);
+					break;
+				case '/':
+					if(b==0){result="MATH ERROR!";}
+					else{
+						result=(a/b).toFixed(2);
+					}
+					break;
+				default:
+					result="MATH ERROR!";
+			}
+			document.getElementById("result").value=result;
+		}
+    </script>
+<body>
+</body>
+</html>

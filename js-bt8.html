@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 8</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+	<p>Nhập số lượng số nguyên > 0: <input type="number" id="number"></p>
+    <button onClick="Random_Sort()">Thực hiện</button>
+    <button onClick="location.reload()">Xóa</button>
+    <p>Dãy số nguyên ngẫu nhiên từ 1 đến 100 đã tạo:</p>
+    <p id="output"></p>
+    <p id="sort"></p>
+    <script>
+		function Random_Sort(){
+			n=document.getElementById("number").value;
+			var text="";
+			var arr=[];
+			for(var i=0;i<n;i++){
+				arr[i]=Math.floor((Math.random()*100)+1);
+				text+=arr[i]+" ";
+			}
+			document.getElementById("output").innerHTML=text;
+			var isAscending=true;
+			var isDescending=true;
+			for(var i=0;i<n-1;i++){
+				if(arr[i]>arr[i+1]){
+					isAscending=false;
+					break;
+				}
+			}
+			for(var i=0;i<n-1;i++){
+				if(arr[i]<arr[i+1]){
+					isDescending=false;
+					break;
+				}
+			}
+			if(isAscending){
+				document.getElementById("sort").innerHTML="Đây là dãy số tăng dần";
+				return;
+			}
+			if(isDescending){
+				document.getElementById("sort").innerHTML="Đây là dãy số giảm dần";
+				return;
+			}
+			document.getElementById("sort").innerHTML="Đây là dãy số không có thứ tự";
+		}
+    </script>
+<body>
+</body>
+</html>

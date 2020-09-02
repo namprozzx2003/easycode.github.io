@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 24</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+
+<body>
+	<p>Nhập số lượng phần tử: <input type="number" id="number"></p>
+    <button onClick="SortDown()">Thực hiện</button>
+    <button onClick="location.reload()">Xóa</button>
+    <p>Dãy số nguyên ngẫu nhiên <=20 đã tạo:</p>
+    <p id="output"></p>
+    <p id="down"></p>
+    <script>
+		function SortDown(){
+			var n=document.getElementById("number").value;
+			var arr=[];
+			var text="";
+			var text2="";
+			for(var i=0;i<n;i++){
+				arr[i]=Math.floor(Math.random()*21);
+				text+=arr[i]+" ";
+			}
+			document.getElementById("output").innerHTML=text;
+			function compare(a,b){return b-a;}
+			arr=arr.sort(compare);
+			for(var i=0;i<n;i++){
+				text2+=arr[i]+" ";
+			}
+			document.getElementById("down").innerHTML="Dãy số theo thứ tự giảm dần:<br><br>"+text2;
+		}
+    </script>
+</body>
+</html>

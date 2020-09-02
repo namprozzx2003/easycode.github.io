@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 21</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+	<p>Nhập số lượng phần tử: <input type="number" id="number"></p>
+    <button onClick="Random_Sum()">Thực hiện</button>
+    <button onClick="location.reload()">Xóa</button>
+    <p>Dãy số nguyên ngẫu nhiên <=20 đã tạo:</p>
+    <p id="output"></p>
+    <p id="sum"></p>
+    <script>
+		function Random_Sum(){
+			var n=document.getElementById("number").value;
+			var text="";
+			var arr=[];
+			var sum=0;
+			for(var i=0;i<n;i++){
+				arr[i]=Math.floor(Math.random()*21);
+				sum+=arr[i];
+				text+=arr[i]+" ";
+			}
+			document.getElementById("output").innerHTML=text;
+			document.getElementById("sum").innerHTML="Tổng các phần tử trong dãy số là: "+sum;
+		}
+    </script>
+<body>
+</body>
+</html>

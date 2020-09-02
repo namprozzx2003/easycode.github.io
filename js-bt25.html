@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 25</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+
+<body>
+	<p>Nhập số lượng phần tử: <input type="number" id="number"></p>
+    <button onClick="EvenOdd()">Thực hiện</button>
+    <button onClick="location.reload()">Xóa</button>
+    <p>Dãy số nguyên ngẫu nhiên <=20 đã tạo:</p>
+    <p id="output"></p>
+    <p id="result"></p>
+    <script>
+		function EvenOdd(){
+			var n=document.getElementById("number").value;
+			var arr=[];
+			var text="";
+			var text2="";
+			for(var i=0;i<n;i++){
+				arr[i]=Math.floor(Math.random()*21);
+				text+=arr[i]+" ";
+			}
+			document.getElementById("output").innerHTML=text;
+			function compare(a,b){return a-b;}
+			arr=arr.sort(compare);
+			for(var i=0;i<n;i++){
+				if(arr[i]%2==0){
+					text2+=arr[i]+" ";
+				}
+			}
+			for(var i=0;i<n;i++){
+				if(arr[i]%2!=0){
+					text2+=arr[i]+" ";
+				}
+			}
+			document.getElementById("result").innerHTML="Mảng sau khi sắp xếp:<br><br>"+text2;
+		}
+    </script>
+</body>
+</html>

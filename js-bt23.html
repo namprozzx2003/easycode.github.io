@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 23</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+
+<body>
+	<p>Nhập số lượng phần tử: <input type="number" id="number"></p>
+    <button onClick="Max_Min_AvgSum()">Thực hiện</button>
+    <button onClick="location.reload()">Xóa</button>
+    <p>Dãy số nguyên ngẫu nhiên <=20 đã tạo:</p>
+    <p id="output"></p>
+    <p id="max"></p>
+    <p id="min"></p>
+    <p id="avg"></p>
+    <script>
+		function Max_Min_AvgSum(){
+			var n=document.getElementById("number").value;
+			var arr=[];
+			var text="";
+			var sum=0;
+			for(var i=0;i<n;i++){
+				arr[i]=Math.floor(Math.random()*21);
+				sum+=arr[i];
+				text+=arr[i]+" ";
+			}
+			document.getElementById("output").innerHTML=text;
+			var Max=Math.max(...arr);
+			var Min=Math.min(...arr);
+			var avg=sum/arr.length;
+			document.getElementById("max").innerHTML="Giá trị lớn nhất là: "+Max;
+			document.getElementById("min").innerHTML="Giá trị nhỏ nhất là: "+Min;
+			document.getElementById("avg").innerHTML="Trung bình cộng các phần tử trong mảng là: "+avg;
+		}
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 10</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+
+<body>
+	<p>Nhập tên một tập tin: <input type="text" id="name"></p>
+    <button onClick="CheckFileType()">Thực hiện</button>
+    <button onClick="location.reload()">Xóa</button>
+    <p id="result"></p>
+    <script>
+		function CheckFileType(){
+			var isImage=false;
+			var result;
+			var name=document.getElementById("name").value;
+			if(name.indexOf(".jpg")>-1||name.indexOf(".gif")>-1||name.indexOf(".png")>-1||name.indexOf(".bmp")>-1){
+				isImage=true;
+			}
+			if(isImage){
+				result="Đây là tập tin hình";
+			}
+			else{
+				result="Đây không phải là tập tin hình";
+			}
+			document.getElementById("result").innerHTML=result;
+		}
+    </script>
+</body>
+</html>

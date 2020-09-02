@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JQ 12</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+
+<body>
+	<button id="btn1">Fill windows</button><br><br>
+    <div id="box" style="background: #B45F04;height: 100px;width: 100px;z-index: 999"></div>
+    <script>
+		$(document).ready(function() {
+			var Width=window.innerWidth||document.body.clientWidth||document.documentElement.clientWidth;
+			var Height=window.innerHeight||document.body.clientHeight||document.documentElement.clientHeight;
+            $("#btn1").click(function() {
+                $("#box").animate({
+					width: Width,
+					height: Height
+				});
+            });
+        });
+    </script>
+</body>
+</html>

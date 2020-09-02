@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 20</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+
+<body>
+	<p>Nhập 1 số nguyên dương: <input type="number" id="number"></p>
+    <button onClick="ReverseNumber()">Thực hiện</button>
+    <button onClick="location.reload()">Xóa</button>
+    <p id="result"></p>
+    <script>
+		function ReverseNumber(){
+			var n=document.getElementById("number").value;
+			var m=n;
+			var rev=0;
+			while(n>0){
+				const temp=n%10;
+				rev=rev*10+temp;
+				n=Math.floor(n/10);
+			}
+			document.getElementById("result").innerHTML="Số đảo ngược của "+m+" là: "+rev;
+		}
+    </script>
+</body>
+</html>

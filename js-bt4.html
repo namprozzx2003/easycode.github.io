@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 4</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+
+<body>
+	<table>
+    	<tr>
+        	<td>Nhập tháng:</td>
+            <td><input type="number" id="month"></td>
+        </tr>
+        <tr>
+        	<td>Nhập năm:</td>
+            <td><input type="number" id="year"></td>
+        </tr>
+        <tr>
+        	<td>Số ngày trong tháng:</td>
+            <td><input type="number" id="daysOfMonth" disabled></td>
+        </tr>
+        <tr>
+        	<td>Số ngày trong năm:</td>
+            <td><input type="number" id="daysOfYear" disabled></td>
+        </tr>
+        <tr>
+        	<td>
+            <button onClick="Days()">Thực hiện</button>
+            <button onClick="location.reload()">Xóa</button>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    <p>Lưu ý: Tháng là số nguyên từ 1 đến 12, năm là số nguyên dương.</p>
+    <script>
+		function IsLeapYear(year){
+			return year%400===0||(year%100!==0&&year%4===0);
+		}
+		function Days(){
+			var month=Number(document.getElementById("month").value);
+			var year=Number(document.getElementById("year").value);
+			var daysOfYear=IsLeapYear(year)?366:365;
+			document.getElementById("daysOfMonth").value=new Date(year,month,0).getDate();
+			document.getElementById("daysOfYear").value=daysOfYear;
+		}
+    </script>
+</body>
+</html>

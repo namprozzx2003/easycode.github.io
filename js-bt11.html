@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT JS 11</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/remove_ads.js"></script>
+</head>
+	<table>
+    	<tr>
+        	<td>Nhập chuỗi:</td>
+            <td><input type="text" id="original"></td>
+        </tr>
+        <tr>
+        	<td>Nhập vị trí:</td>
+            <td><input type="number" id="pos"></td>
+        </tr>
+        <tr>
+        	<td>Chuỗi trả về:</td>
+            <td><input type="text" disabled id="output"></td>
+        </tr>
+        <tr>
+        	<td>
+            	<button onclick="RemoveChar()">Thực hiện</button>
+                <button onClick="location.reload()">Xóa</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+		function RemoveChar(){
+			var output,char;
+			var str=document.getElementById("original").value;
+			var pos=Number(document.getElementById("pos").value);
+			if((-1<pos)&&(pos<str.length)){
+				char=str.charAt(pos);
+				output=str.replace(char,"");
+			}
+			else{
+				output="Vị trí không hợp lệ!";
+			}
+			document.getElementById("output").value=output;
+		}
+    </script>
+<body>
+</body>
+</html>
